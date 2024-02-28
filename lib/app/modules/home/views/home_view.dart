@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
+import 'package:flutter_emoji/flutter_emoji.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
@@ -13,11 +14,16 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: const Column(
+        children: [
+          Row(
+            children: [
+              Text(
+                "Current Emote: \u{1f600}"
+              )
+            ],
+          )
+        ],
       ),
     );
   }
