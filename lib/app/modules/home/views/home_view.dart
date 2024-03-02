@@ -14,12 +14,12 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Column(
+      body: Column(
         children: [
           Row(
             children: [
               Text(
-                "Current Emote: \u{1f600}"
+                "Current Emote: ${controller.currentEmote}"
               )
             ],
           )
